@@ -1,6 +1,14 @@
+"use client";
+
 import NewsLatterBox from "./NewsLatterBox";
+import { useContactFormSubmit } from "@/hooks/useContactFormSubmit";
 
 const Contact = () => {
+  const { handleSubmit, state, errorMessage, successMessage, isSubmitting } =
+    useContactFormSubmit({
+      formName: "Contact Page",
+    });
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -17,18 +25,37 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Have questions about buying a new construction home? Want to learn more about exclusive buyer representation? Fill out the form below and we'll get back to you within 24 hours to schedule your free consultation.
               </p>
-              <form>
+              {state === "success" ? (
+                <p
+                  className="mb-6 rounded-xs border border-green-200 bg-green-50 px-4 py-3 text-base text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-100"
+                  role="status"
+                >
+                  {successMessage}
+                </p>
+              ) : null}
+              {state === "error" ? (
+                <p
+                  className="mb-6 rounded-xs border border-red-200 bg-red-50 px-4 py-3 text-base text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-100"
+                  role="alert"
+                >
+                  {errorMessage}
+                </p>
+              ) : null}
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label
-                        htmlFor="name"
+                        htmlFor="contact-name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Name
                       </label>
                       <input
+                        id="contact-name"
+                        name="name"
                         type="text"
+                        required
                         placeholder="Enter your name"
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
@@ -37,13 +64,16 @@ const Contact = () => {
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label
-                        htmlFor="email"
+                        htmlFor="contact-email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Email
                       </label>
                       <input
+                        id="contact-email"
+                        name="email"
                         type="email"
+                        required
                         placeholder="Enter your email"
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
@@ -52,12 +82,13 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <div className="mb-8">
                       <label
-                        htmlFor="message"
+                        htmlFor="contact-message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
                         Your Message
                       </label>
                       <textarea
+                        id="contact-message"
                         name="message"
                         rows={5}
                         placeholder="Tell us about your homebuying goals, timeline, or any questions you have..."
@@ -66,8 +97,12 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Send Message
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 disabled:opacity-60 dark:shadow-submit-dark"
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </button>
                   </div>
                 </div>

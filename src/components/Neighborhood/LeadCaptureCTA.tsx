@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useContactFormSubmit } from "@/hooks/useContactFormSubmit";
 
 type LeadCaptureCTAProps = {
   neighborhoodName: string;
@@ -7,6 +9,20 @@ type LeadCaptureCTAProps = {
 export default function LeadCaptureCTA({
   neighborhoodName,
 }: LeadCaptureCTAProps) {
+  const { handleSubmit, state, errorMessage, successMessage, isSubmitting } =
+    useContactFormSubmit({
+      formName: "Neighborhood Lead Capture",
+      getExtraFields: (form) => {
+        const formData = new FormData(form);
+        return {
+          neighborhood: neighborhoodName,
+          timeline: String(formData.get("timeline") ?? "").trim() || undefined,
+          priceRange:
+            String(formData.get("priceRange") ?? "").trim() || undefined,
+        };
+      },
+    });
+
   return (
     <section className="relative overflow-hidden bg-primary py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -20,7 +36,23 @@ export default function LeadCaptureCTA({
           </p>
 
           <div className="mx-auto max-w-2xl rounded-lg bg-white p-8 shadow-xl dark:bg-gray-900">
-            <form className="space-y-6">
+            {state === "success" ? (
+              <p
+                className="mb-6 rounded-xs border border-green-200 bg-green-50 px-4 py-3 text-base text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-100"
+                role="status"
+              >
+                {successMessage}
+              </p>
+            ) : null}
+            {state === "error" ? (
+              <p
+                className="mb-6 rounded-xs border border-red-200 bg-red-50 px-4 py-3 text-base text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-100"
+                role="alert"
+              >
+                {errorMessage}
+              </p>
+            ) : null}
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label
@@ -120,9 +152,10 @@ export default function LeadCaptureCTA({
 
               <button
                 type="submit"
-                className="w-full rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/90"
+                disabled={isSubmitting}
+                className="w-full rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/90 disabled:opacity-60"
               >
-                Get Your Free Consultation
+                {isSubmitting ? "Sending..." : "Get Your Free Consultation"}
               </button>
 
               <p className="text-sm text-body-color dark:text-body-color-dark">
