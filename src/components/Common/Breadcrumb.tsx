@@ -1,22 +1,29 @@
 import Link from "next/link";
 import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
+import {
+  buildBreadcrumbItems,
+  type BreadcrumbParent,
+} from "@/lib/breadcrumbs";
 
 const Breadcrumb = ({
   pageName,
   description,
   path,
+  parents,
+  schemaPageName,
 }: {
   pageName: string;
   description: string;
-  path?: string;
+  path: string;
+  parents?: BreadcrumbParent[];
+  schemaPageName?: string;
 }) => {
-  const baseUrl = "https://www.arieshenderson.com";
-  const currentPath = path || "";
-  
-  const breadcrumbItems = [
-    { name: "Home", url: baseUrl },
-    ...(currentPath ? [{ name: pageName, url: `${baseUrl}/${currentPath}` }] : []),
-  ];
+  const breadcrumbItems = buildBreadcrumbItems({
+    path,
+    pageName,
+    parents,
+    schemaPageName,
+  });
 
   return (
     <>
@@ -36,7 +43,7 @@ const Breadcrumb = ({
             </div>
             <div className="w-full px-4 md:w-4/12 lg:w-5/12">
               <div className="text-end">
-                <ul className="flex items-center md:justify-end">
+                <ul className="flex flex-wrap items-center justify-end">
                   <li className="flex items-center">
                     <Link
                       href="/"
@@ -46,6 +53,17 @@ const Breadcrumb = ({
                     </Link>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
                   </li>
+                  {parents?.map((parent) => (
+                    <li key={parent.path} className="flex items-center">
+                      <Link
+                        href={`/${parent.path.replace(/^\/+/, "")}`}
+                        className="pr-1 text-base font-medium text-body-color hover:text-primary"
+                      >
+                        {parent.name}
+                      </Link>
+                      <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
+                    </li>
+                  ))}
                   <li className="text-base font-medium text-primary">
                     {pageName}
                   </li>

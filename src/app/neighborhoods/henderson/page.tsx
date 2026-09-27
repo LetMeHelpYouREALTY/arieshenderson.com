@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
 import NeighborhoodHero from "@/components/Neighborhood/NeighborhoodHero";
 import BuilderCommunities from "@/components/Neighborhood/BuilderCommunities";
@@ -15,7 +14,6 @@ import { Metadata } from "next";
 import neighborhoodsData from "@/data/neighborhoods.json";
 
 const neighborhood = neighborhoodsData.henderson;
-const baseUrl = "https://www.arieshenderson.com";
 
 export const metadata: Metadata = genMeta({
   title: "New Construction Homes in Henderson NV",
@@ -36,12 +34,6 @@ export default function HendersonNeighborhoodPage() {
     year: "numeric",
   });
 
-  const breadcrumbItems = [
-    { name: "Home", url: baseUrl },
-    { name: "Neighborhoods", url: `${baseUrl}/neighborhoods` },
-    { name: "Henderson", url: `${baseUrl}/neighborhoods/henderson` },
-  ];
-
   const placeSchema = {
     "@context": "https://schema.org",
     "@type": "Place",
@@ -57,12 +49,13 @@ export default function HendersonNeighborhoodPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <StructuredData data={placeSchema} />
       <Breadcrumb
         pageName="Henderson Neighborhood"
         description="Family-friendly area with excellent schools and community amenities."
         path="neighborhoods/henderson"
+        parents={[{ name: "Neighborhoods", path: "neighborhoods" }]}
+        schemaPageName="Henderson"
       />
 
       <NeighborhoodHero

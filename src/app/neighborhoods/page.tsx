@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import Link from "next/link";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
@@ -61,21 +60,13 @@ const neighborhoods = [
 ];
 
 export default function NeighborhoodsPage() {
-  const breadcrumbItems = [
-    { name: "Home", url: "https://www.arieshenderson.com" },
-    {
-      name: "Neighborhoods",
-      url: "https://www.arieshenderson.com/neighborhoods",
-    },
-  ];
-
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumb
         pageName="Las Vegas Neighborhoods"
         description="Explore new construction communities in Las Vegas, Henderson, Summerlin, and North Las Vegas."
         path="neighborhoods"
+        schemaPageName="Neighborhoods"
       />
 
       {/* Hero Section */}
