@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
+import NearbyAmenitiesSection from "@/components/Amenities/NearbyAmenitiesSection";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
 
@@ -43,6 +44,8 @@ export default function SearchPage() {
                 <AdvancedSearch agentEncodedId="QWdlbnQtMjI1MDUw" />
               </div>
             </div>
+
+            <NearbyAmenitiesSection variant="page" />
 
             <div className="rounded-lg border border-gray-200 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800">
               <h2 className="mb-4 text-xl font-bold text-black dark:text-white">

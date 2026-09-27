@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
+import NearbyAmenitiesSection from "@/components/Amenities/NearbyAmenitiesSection";
 import Link from "next/link";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
@@ -385,6 +386,8 @@ export default function NewConstructionPage() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection variant="page" />
 
       {/* Property Search */}
       <section className="py-16 md:py-20 lg:py-28">
