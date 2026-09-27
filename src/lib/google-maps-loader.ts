@@ -1,43 +1,42 @@
-let mapsLoadPromise: Promise<void> | null = null;
+let mapsReady: Promise<void> | null = null;
 
-export function loadGoogleMapsScript(apiKey: string): Promise<void> {
-  if (typeof window === "undefined") {
-    return Promise.reject(new Error("Google Maps can only load in the browser"));
-  }
-
-  if (window.google?.maps?.importLibrary) {
+export function loadGoogleMaps(apiKey: string): Promise<void> {
+  if (typeof window === "undefined") return Promise.reject(new Error("ssr"));
+  if (typeof window.google?.maps?.importLibrary === "function")
     return Promise.resolve();
-  }
-
-  if (mapsLoadPromise) {
-    return mapsLoadPromise;
-  }
-
-  mapsLoadPromise = new Promise((resolve, reject) => {
-    const existing = document.querySelector<HTMLScriptElement>(
-      'script[data-google-maps-loader="true"]',
-    );
-    if (existing) {
-      existing.addEventListener("load", () => resolve());
-      existing.addEventListener("error", () =>
-        reject(new Error("Failed to load Google Maps")),
-      );
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.dataset.googleMapsLoader = "true";
-    script.async = true;
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&loading=async`;
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error("Failed to load Google Maps"));
-    document.head.appendChild(script);
+  if (mapsReady) return mapsReady;
+  mapsReady = new Promise<void>((resolve, reject) => {
+    const cb = "__gmapsReady";
+    (window as unknown as Record<string, unknown>)[cb] = () => resolve();
+    (window as unknown as { gm_authFailure?: () => void }).gm_authFailure =
+      () => {
+        window.dispatchEvent(new Event("gmaps:auth-failure"));
+        reject(new Error("gm_authFailure"));
+      };
+    const s = document.createElement("script");
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly&loading=async&callback=${cb}`;
+    s.async = true;
+    s.onerror = () => {
+      mapsReady = null;
+      reject(new Error("maps script failed"));
+    };
+    document.head.appendChild(s);
   });
-
-  return mapsLoadPromise;
+  return mapsReady;
 }
 
-export function buildDirectionsUrl(lat: number, lng: number, name?: string): string {
+export let mapsAuthFailed = false;
+if (typeof window !== "undefined") {
+  window.addEventListener("gmaps:auth-failure", () => {
+    mapsAuthFailed = true;
+  });
+}
+
+export function buildDirectionsUrl(
+  lat: number,
+  lng: number,
+  name?: string,
+): string {
   const destination = name
     ? encodeURIComponent(`${name}@${lat},${lng}`)
     : `${lat},${lng}`;

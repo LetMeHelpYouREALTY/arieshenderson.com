@@ -2,7 +2,10 @@ import type { AmenityCategoryId } from "@/components/Amenities/amenity-categorie
 
 export type CuratedPlace = {
   name: string;
-  address: string;
+  /** Verified street line; omit when no primary-source street address exists */
+  address?: string;
+  addressLocality: string;
+  postalCode?: string;
   category: AmenityCategoryId;
   schemaType:
     | "Restaurant"
@@ -15,44 +18,61 @@ export type CuratedPlace = {
     | "ShoppingCenter"
     | "School"
     | "Place";
+  sourceUrl: string;
   note?: string;
 };
 
-/** Verified public listings — used for fallback UI and JSON-LD ItemList only */
+/** Primary-source verified listings — fallback UI and JSON-LD ItemList */
 export const CURATED_PLACES: CuratedPlace[] = [
   {
     name: "Smith's Marketplace",
-    address: "845 E Lake Mead Pkwy, Henderson, NV 89011",
+    address: "845 E Lake Mead Pkwy",
+    addressLocality: "Henderson",
+    postalCode: "89011",
     category: "grocery",
     schemaType: "GroceryStore",
-    note: "Full-service grocery anchor along the Lake Mead Parkway corridor east of Aries.",
+    sourceUrl:
+      "https://www.smithsfoodanddrug.com/stores/grocery/nv/henderson/cadence-marketplace/706/00331",
+    note: "Full-service grocery anchor at Cadence Village Center along the Lake Mead Parkway corridor east of Aries.",
   },
   {
     name: "St. Rose Dominican Hospital, Siena Campus",
-    address: "3001 St Rose Pkwy, Henderson, NV 89052",
+    address: "3001 St Rose Pkwy",
+    addressLocality: "Henderson",
+    postalCode: "89052",
     category: "healthcare",
     schemaType: "Hospital",
+    sourceUrl: "https://www.dignityhealth.org/las-vegas/locations/siena",
   },
   {
     name: "The District at Green Valley Ranch",
-    address: "2240 Village Walk Dr, Henderson, NV 89052",
+    address: "2240 Village Walk Dr",
+    addressLocality: "Henderson",
+    postalCode: "89052",
     category: "shopping",
     schemaType: "ShoppingCenter",
+    sourceUrl: "https://shopthedistrictgvr.com/contact-us/",
     note: "Outdoor shopping, dining, and entertainment in Green Valley.",
   },
   {
     name: "C.T. Sewell Elementary School",
-    address: "700 E Lake Mead Parkway, Henderson, NV 89015",
+    address: "700 E Lake Mead Parkway",
+    addressLocality: "Henderson",
+    postalCode: "89015",
     category: "schools",
     schemaType: "School",
+    sourceUrl: "https://www.sewellelementary.com/",
     note: "Clark County School District; confirm zoning for a specific Aries address before enrolling.",
   },
   {
-    name: "Lake Mead National Recreation Area",
-    address: "601 Nevada Way, Boulder City, NV 89005",
+    name: "Greenbow Park at Aries",
+    addressLocality: "Henderson",
     category: "parks",
     schemaType: "Park",
-    note: "Boating, hiking, and shoreline recreation northeast of Henderson.",
+    sourceUrl:
+      "https://www.pulte.com/homes/nevada/las-vegas/henderson/aries-211675",
+    note:
+      "First completed park in the Aries master plan (PulteGroup), opened with the community in September 2026.",
   },
 ];
 
@@ -79,7 +99,7 @@ export const AMENITY_CONTENT_SECTIONS: AmenityContentSection[] = [
     id: "parks",
     title: "Parks & recreation",
     body:
-      "Aries is a new master-planned community with on-site parks and trails, including Greenbow Park (opened with the community). Lake Mead National Recreation Area is northeast for boating and desert shoreline access. Henderson's city park system—including Cornerstone Park and Acacia Park—is available farther west toward central Henderson.",
+      "Aries is a new master-planned community with on-site parks and trails, including Greenbow Park (opened with the community). Henderson's city park system—including Cornerstone Park and Acacia Park—is available farther west toward central Henderson. Lake Mead National Recreation Area is northeast for boating and desert shoreline access by car.",
   },
   {
     id: "golf",
@@ -137,7 +157,7 @@ export const AMENITIES_FAQS: AmenityFaq[] = [
   {
     question: "What parks are inside or near the Aries community?",
     answer:
-      "Aries includes on-site parks such as Greenbow Park, with additional Henderson city parks and Lake Mead National Recreation Area reachable by car.",
+      "Aries includes on-site parks such as Greenbow Park, with additional Henderson city parks reachable by car.",
   },
   {
     question: "Which schools serve new homes at Aries?",

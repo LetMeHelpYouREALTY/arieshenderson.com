@@ -65,13 +65,19 @@ export default function AmenitiesPage() {
       item: {
         "@type": place.schemaType,
         name: place.name,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: place.address,
-          addressLocality: COMMUNITY_CONFIG.city,
-          addressRegion: COMMUNITY_CONFIG.state,
-          addressCountry: "US",
-        },
+        url: place.sourceUrl,
+        ...(place.address
+          ? {
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: place.address,
+                addressLocality: place.addressLocality,
+                addressRegion: COMMUNITY_CONFIG.state,
+                postalCode: place.postalCode,
+                addressCountry: "US",
+              },
+            }
+          : {}),
       },
     })),
   };
