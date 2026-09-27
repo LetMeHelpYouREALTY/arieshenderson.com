@@ -1,9 +1,21 @@
 "use client";
 
+import { useContactFormSubmit } from "@/hooks/useContactFormSubmit";
 import { useTheme } from "next-themes";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const { handleSubmit, state, errorMessage, successMessage, isSubmitting } =
+    useContactFormSubmit({
+      formName: "Newsletter",
+      personTag: "Newsletter",
+      inquiryType: "Registration",
+      successMessage:
+        "You're subscribed! Watch your inbox for Las Vegas market insights and new construction updates.",
+      getExtraFields: () => ({
+        message: "Newsletter email signup",
+      }),
+    });
 
   return (
     <div className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
@@ -13,28 +25,48 @@ const NewsLatterBox = () => {
       <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:border-white/25">
         Subscribe to receive the latest Las Vegas real estate market insights, buying tips, and new construction updates delivered to your inbox.
       </p>
-      <div>
+      {state === "success" ? (
+        <p
+          className="mb-6 rounded-xs border border-green-200 bg-green-50 px-4 py-3 text-base text-green-800 dark:border-green-800 dark:bg-green-950 dark:text-green-100"
+          role="status"
+        >
+          {successMessage}
+        </p>
+      ) : null}
+      {state === "error" ? (
+        <p
+          className="mb-6 rounded-xs border border-red-200 bg-red-50 px-4 py-3 text-base text-red-800 dark:border-red-800 dark:bg-red-950 dark:text-red-100"
+          role="alert"
+        >
+          {errorMessage}
+        </p>
+      ) : null}
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
+          required
           placeholder="Enter your name"
           className="border-stroke text-body-color focus:border-primary dark:text-body-color-dark dark:shadow-two dark:focus:border-primary mb-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
         />
         <input
           type="email"
           name="email"
+          required
           placeholder="Enter your email"
           className="border-stroke text-body-color focus:border-primary dark:text-body-color-dark dark:shadow-two dark:focus:border-primary mb-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
         />
-        <input
+        <button
           type="submit"
-          value="Subscribe"
-          className="bg-primary shadow-submit hover:bg-primary/90 dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-xs px-9 py-4 text-base font-medium text-white duration-300"
-        />
+          disabled={isSubmitting}
+          className="bg-primary shadow-submit hover:bg-primary/90 dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-xs px-9 py-4 text-base font-medium text-white duration-300 disabled:opacity-60"
+        >
+          {isSubmitting ? "Subscribing..." : "Subscribe"}
+        </button>
         <p className="text-body-color dark:text-body-color-dark text-center text-base leading-relaxed">
           No spam guaranteed, So please don’t send any spam mail.
         </p>
-      </div>
+      </form>
 
       <div>
         <span className="absolute top-7 left-2">

@@ -13,6 +13,8 @@ type UseContactFormSubmitOptions = {
   getExtraFields?: (
     form: HTMLFormElement,
   ) => Record<string, string | undefined>;
+  /** Second FUB person tag (after site domain); sent as personTag */
+  personTag?: string;
 };
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
@@ -22,6 +24,7 @@ export function useContactFormSubmit({
   inquiryType = "General Inquiry",
   successMessage = "Thank you! Your message was sent. We'll get back to you within 24 hours.",
   getExtraFields,
+  personTag,
 }: UseContactFormSubmitOptions) {
   const [state, setState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -50,6 +53,7 @@ export function useContactFormSubmit({
           email: email || undefined,
           phone: phone || undefined,
           message: message || undefined,
+          personTag: personTag || undefined,
           sourceUrl:
             typeof window !== "undefined" ? window.location.href : undefined,
           ...extra,

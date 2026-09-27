@@ -14,6 +14,8 @@ export type ContactPayloadInput = {
   neighborhood?: string;
   timeline?: string;
   priceRange?: string;
+  /** Second FUB person tag after site domain; defaults to formName */
+  personTag?: string;
 };
 
 export type ValidatedContactPayload = ContactPayloadInput & {
@@ -56,6 +58,8 @@ export function validateContactPayload(
     typeof record.timeline === "string" ? record.timeline.trim() : "";
   const priceRange =
     typeof record.priceRange === "string" ? record.priceRange.trim() : "";
+  const personTag =
+    typeof record.personTag === "string" ? record.personTag.trim() : "";
 
   return {
     ok: true,
@@ -70,6 +74,7 @@ export function validateContactPayload(
       neighborhood,
       timeline,
       priceRange,
+      personTag,
     },
   };
 }
@@ -126,6 +131,8 @@ export function buildFollowUpBossEventBody(
   sourceUrl: string,
 ) {
   const { firstName, lastName } = splitName(data.name);
+  const tagLabel = data.personTag || data.formName;
+
   const person: {
     firstName: string;
     lastName?: string;
@@ -135,7 +142,7 @@ export function buildFollowUpBossEventBody(
   } = {
     firstName,
     emails: data.email ? [{ value: data.email }] : [],
-    tags: [SITE_SOURCE, data.formName],
+    tags: [SITE_SOURCE, tagLabel],
   };
 
   if (lastName) {
