@@ -14,6 +14,7 @@ const BlogSidebarPage = () => {
       <Breadcrumb
         pageName="Market Insights"
         description="Stay informed with the latest real estate market news, buying tips, and market trends."
+        path="blog"
       />
       <section className="pt-[120px] pb-[120px]">
         <div className="container">

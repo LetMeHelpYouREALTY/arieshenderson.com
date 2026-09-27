@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
 import NeighborhoodHero from "@/components/Neighborhood/NeighborhoodHero";
 import BuilderCommunities from "@/components/Neighborhood/BuilderCommunities";
@@ -14,7 +13,6 @@ import { Metadata } from "next";
 import neighborhoodsData from "@/data/neighborhoods.json";
 
 const neighborhood = neighborhoodsData.summerlin;
-const baseUrl = "https://www.arieshenderson.com";
 
 export const metadata: Metadata = genMeta({
   title: "New Construction Homes in Summerlin NV",
@@ -36,12 +34,6 @@ export default function SummerlinNeighborhoodPage() {
     year: "numeric",
   });
 
-  const breadcrumbItems = [
-    { name: "Home", url: baseUrl },
-    { name: "Neighborhoods", url: `${baseUrl}/neighborhoods` },
-    { name: "Summerlin", url: `${baseUrl}/neighborhoods/summerlin` },
-  ];
-
   const placeSchema = {
     "@context": "https://schema.org",
     "@type": "Place",
@@ -57,12 +49,13 @@ export default function SummerlinNeighborhoodPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <StructuredData data={placeSchema} />
       <Breadcrumb
         pageName="Summerlin Neighborhood"
         description="Master-planned community with top-rated schools, parks, and shopping."
         path="neighborhoods/summerlin"
+        parents={[{ name: "Neighborhoods", path: "neighborhoods" }]}
+        schemaPageName="Summerlin"
       />
 
       <NeighborhoodHero

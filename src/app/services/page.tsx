@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import Link from "next/link";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
@@ -191,18 +190,13 @@ const services = [
 ];
 
 export default function ServicesPage() {
-  const breadcrumbItems = [
-    { name: "Home", url: "https://www.arieshenderson.com" },
-    { name: "Services", url: "https://www.arieshenderson.com/services" },
-  ];
-
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumb
         pageName="Our Services"
         description="Comprehensive buyer representation services for Las Vegas homebuyers. Free to you—the builder or seller pays our commission."
         path="services"
+        schemaPageName="Services"
       />
 
       {/* Hero Section */}

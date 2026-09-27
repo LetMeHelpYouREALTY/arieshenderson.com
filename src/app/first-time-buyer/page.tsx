@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import Link from "next/link";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
@@ -18,21 +17,13 @@ export const metadata: Metadata = genMeta({
 });
 
 export default function FirstTimeBuyerPage() {
-  const breadcrumbItems = [
-    { name: "Home", url: "https://www.arieshenderson.com" },
-    {
-      name: "First-Time Homebuyer",
-      url: "https://www.arieshenderson.com/first-time-buyer",
-    },
-  ];
-
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumb
         pageName="First-Time Homebuyer Guide"
         description="Expert guidance for first-time homebuyers in Las Vegas. We make the process simple and stress-free."
         path="first-time-buyer"
+        schemaPageName="First-Time Homebuyer"
       />
 
       {/* Hero Section */}

@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
 import NeighborhoodHero from "@/components/Neighborhood/NeighborhoodHero";
 import BuilderCommunities from "@/components/Neighborhood/BuilderCommunities";
@@ -14,7 +13,6 @@ import { Metadata } from "next";
 import neighborhoodsData from "@/data/neighborhoods.json";
 
 const neighborhood = neighborhoodsData["north-las-vegas"];
-const baseUrl = "https://www.arieshenderson.com";
 
 export const metadata: Metadata = genMeta({
   title: "New Construction Homes in North Las Vegas NV",
@@ -35,12 +33,6 @@ export default function NorthLasVegasNeighborhoodPage() {
     year: "numeric",
   });
 
-  const breadcrumbItems = [
-    { name: "Home", url: baseUrl },
-    { name: "Neighborhoods", url: `${baseUrl}/neighborhoods` },
-    { name: "North Las Vegas", url: `${baseUrl}/neighborhoods/north-las-vegas` },
-  ];
-
   const placeSchema = {
     "@context": "https://schema.org",
     "@type": "Place",
@@ -56,12 +48,13 @@ export default function NorthLasVegasNeighborhoodPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <StructuredData data={placeSchema} />
       <Breadcrumb
         pageName="North Las Vegas Neighborhood"
         description="Growing area with new construction and affordable housing options."
         path="neighborhoods/north-las-vegas"
+        parents={[{ name: "Neighborhoods", path: "neighborhoods" }]}
+        schemaPageName="North Las Vegas"
       />
 
       <NeighborhoodHero

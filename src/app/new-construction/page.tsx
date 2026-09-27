@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
 import Link from "next/link";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
@@ -20,11 +19,6 @@ export const metadata: Metadata = genMeta({
 });
 
 export default function NewConstructionPage() {
-  const breadcrumbItems = [
-    { name: "Home", url: "https://www.arieshenderson.com" },
-    { name: "New Construction", url: "https://www.arieshenderson.com/new-construction" },
-  ];
-
   const serviceSchema = {
     serviceType: "Exclusive Buyer Representation for New Construction",
     provider: {
@@ -51,12 +45,12 @@ export default function NewConstructionPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
       <SchemaMarkup type="Service" data={serviceSchema} />
       <Breadcrumb
         pageName="New Construction Buyer Representation"
         description="Expert guidance for buying new construction homes in Las Vegas. We negotiate on your behalf and protect your interests."
         path="new-construction"
+        schemaPageName="New Construction"
       />
 
       {/* Hero Section */}
