@@ -42,7 +42,7 @@ export const CURATED_PLACES: CuratedPlace[] = [
   },
   {
     name: "C.T. Sewell Elementary School",
-    address: "550 Fifth St, Henderson, NV 89015",
+    address: "700 E Lake Mead Parkway, Henderson, NV 89015",
     category: "schools",
     schemaType: "School",
     note: "Clark County School District; confirm zoning for a specific Aries address before enrolling.",
