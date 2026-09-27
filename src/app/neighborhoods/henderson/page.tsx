@@ -6,6 +6,7 @@ import MarketStats from "@/components/Neighborhood/MarketStats";
 import SchoolsList from "@/components/Neighborhood/SchoolsList";
 import NeighborhoodFAQ from "@/components/Neighborhood/NeighborhoodFAQ";
 import LeadCaptureCTA from "@/components/Neighborhood/LeadCaptureCTA";
+import NearbyAmenitiesSection from "@/components/Amenities/NearbyAmenitiesSection";
 import StructuredData from "@/components/SEO/StructuredData";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import Link from "next/link";
@@ -165,6 +166,8 @@ export default function HendersonNeighborhoodPage() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection variant="page" />
 
       {/* Why Use a Buyer's Agent */}
       <section className="bg-gray-50 py-16 dark:bg-gray-800 md:py-20 lg:py-28">

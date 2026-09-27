@@ -20,6 +20,7 @@ Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with
 Las Vegas, Henderson, North Las Vegas, and surrounding Southern Nevada communities
 ## Key Pages
 - [Home](${baseUrl}/)
+- [Nearby Amenities](${baseUrl}/amenities)
 - [Contact](${baseUrl}/contact)
 - [About](${baseUrl}/about)
 ## Contact

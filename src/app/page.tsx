@@ -11,6 +11,7 @@ import TwoPathNavigation from "@/components/Homepage/TwoPathNavigation";
 import PricingSection from "@/components/Homepage/PricingSection";
 import PropertySearchWidget from "@/components/Homepage/PropertySearchWidget";
 import FeaturedCommunities from "@/components/Homepage/FeaturedCommunities";
+import NearbyAmenitiesSection from "@/components/Amenities/NearbyAmenitiesSection";
 import FAQSection from "@/components/Homepage/FAQSection";
 import CTASection from "@/components/Homepage/CTASection";
 import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
@@ -66,6 +67,8 @@ export default function Home() {
       
       {/* 11. Featured Communities */}
       <FeaturedCommunities />
+
+      <NearbyAmenitiesSection variant="home" />
       
       {/* 12. FAQ */}
       <FAQSection />

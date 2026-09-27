@@ -39,6 +39,17 @@ export default function LocalBusinessSchema() {
         "@type": "City",
         name: "Summerlin",
       },
+      {
+        "@type": "Place",
+        name: "Aries Henderson",
+        description:
+          "Master-planned new home community in Henderson, Nevada along East Lake Mead Parkway",
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 36.0757934,
+          longitude: -114.9284155,
+        },
+      },
     ],
     openingHoursSpecification: [
       {
