@@ -2,7 +2,6 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
 import NeighborhoodHero from "@/components/Neighborhood/NeighborhoodHero";
 import BuilderCommunities from "@/components/Neighborhood/BuilderCommunities";
-import MarketStats from "@/components/Neighborhood/MarketStats";
 import SchoolsList from "@/components/Neighborhood/SchoolsList";
 import NeighborhoodFAQ from "@/components/Neighborhood/NeighborhoodFAQ";
 import LeadCaptureCTA from "@/components/Neighborhood/LeadCaptureCTA";
@@ -31,10 +30,6 @@ export const metadata: Metadata = {
 };
 
 export default function NorthLasVegasNeighborhoodPage() {
-  const lastUpdated = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
 
   const placeSchema = {
     "@context": "https://schema.org",
@@ -97,16 +92,6 @@ export default function NorthLasVegasNeighborhoodPage() {
       <BuilderCommunities
         communities={neighborhood.communities}
         neighborhoodName={neighborhood.name}
-      />
-
-      <MarketStats
-        medianPrice={neighborhood.medianPrice}
-        pricePerSqft={neighborhood.pricePerSqft}
-        daysOnMarket={neighborhood.daysOnMarket}
-        activeListings={neighborhood.activeListings}
-        yoyChange={neighborhood.yoyChange}
-        neighborhoodName={neighborhood.name}
-        lastUpdated={lastUpdated}
       />
 
       <SchoolsList schools={neighborhood.schools} neighborhoodName={neighborhood.name} />

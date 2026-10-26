@@ -1,6 +1,5 @@
 type School = {
   name: string;
-  rating: number;
   type: string;
 };
 
@@ -17,20 +16,16 @@ export default function SchoolsList({
   schools,
   neighborhoodName,
 }: SchoolsListProps) {
-  const renderSchoolStars = (rating: number) => {
-    return "★".repeat(rating) + "☆".repeat(10 - rating);
-  };
-
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
-            Top-Rated Schools in {neighborhoodName}
+            Schools Serving {neighborhoodName}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-body-color dark:text-body-color-dark">
-            {neighborhoodName} is served by the Clark County School District and
-            features several highly-rated public and private schools.
+            {neighborhoodName} is served by the Clark County School District,
+            with private schools nearby.
           </p>
           <p className="mt-4 text-sm text-body-color/70 dark:text-body-color-dark/70">
             School assignments may vary by community. Verify zoning with the
@@ -53,14 +48,6 @@ export default function SchoolsList({
                   <h4 className="mb-2 font-semibold text-black dark:text-white">
                     {school.name}
                   </h4>
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="text-sm text-yellow-500">
-                      {renderSchoolStars(school.rating)}
-                    </span>
-                    <span className="text-sm font-medium text-body-color dark:text-body-color-dark">
-                      {school.rating}/10
-                    </span>
-                  </div>
                   <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                     {school.type}
                   </span>
@@ -83,14 +70,6 @@ export default function SchoolsList({
                   <h4 className="mb-2 font-semibold text-black dark:text-white">
                     {school.name}
                   </h4>
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="text-sm text-yellow-500">
-                      {renderSchoolStars(school.rating)}
-                    </span>
-                    <span className="text-sm font-medium text-body-color dark:text-body-color-dark">
-                      {school.rating}/10
-                    </span>
-                  </div>
                   <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                     {school.type}
                   </span>
@@ -113,14 +92,6 @@ export default function SchoolsList({
                   <h4 className="mb-2 font-semibold text-black dark:text-white">
                     {school.name}
                   </h4>
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="text-sm text-yellow-500">
-                      {renderSchoolStars(school.rating)}
-                    </span>
-                    <span className="text-sm font-medium text-body-color dark:text-body-color-dark">
-                      {school.rating}/10
-                    </span>
-                  </div>
                   <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                     {school.type}
                   </span>

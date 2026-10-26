@@ -4,27 +4,29 @@ type MarketStatsProps = {
   medianPrice: number;
   pricePerSqft: number;
   daysOnMarket: number;
-  activeListings: number;
+  homesSold: number;
   yoyChange: string;
   neighborhoodName: string;
-  lastUpdated: string;
+  asOf: string;
+  source: string;
 };
 
 export default function MarketStats({
   medianPrice,
   pricePerSqft,
   daysOnMarket,
-  activeListings,
+  homesSold,
   yoyChange,
   neighborhoodName,
-  lastUpdated,
+  asOf,
+  source,
 }: MarketStatsProps) {
   const statsSchema = {
     "@context": "https://schema.org",
     "@type": "Dataset",
-    name: `${neighborhoodName} New Construction Market Statistics`,
-    description: `Current market statistics for new construction homes in ${neighborhoodName}`,
-    datePublished: lastUpdated,
+    name: `${neighborhoodName} Housing Market Statistics`,
+    description: `Median sale price, price per square foot, days on market and homes sold in ${neighborhoodName}`,
+    temporalCoverage: asOf,
     variableMeasured: [
       {
         "@type": "PropertyValue",
@@ -43,8 +45,8 @@ export default function MarketStats({
       },
       {
         "@type": "PropertyValue",
-        name: "Active Listings",
-        value: activeListings,
+        name: "Homes Sold",
+        value: homesSold,
       },
     ],
   };
@@ -56,10 +58,10 @@ export default function MarketStats({
         <div className="container">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
-              {neighborhoodName} New Construction Market Stats
+              {neighborhoodName} Market Stats
             </h2>
             <p className="text-sm text-body-color/70 dark:text-body-color-dark/70">
-              Data as of {lastUpdated}. Source: Local MLS and builder data.
+              Data as of {asOf}. Source: {source}.
             </p>
           </div>
 
@@ -93,10 +95,10 @@ export default function MarketStats({
 
             <div className="rounded-lg border border-gray-200 bg-white p-6 text-center shadow-sm dark:border-gray-700 dark:bg-gray-900">
               <p className="mb-2 text-sm font-medium text-body-color dark:text-body-color-dark">
-                Active Listings
+                Homes Sold
               </p>
               <p className="text-2xl font-bold text-black dark:text-white">
-                {activeListings}
+                {homesSold.toLocaleString()}
               </p>
             </div>
 

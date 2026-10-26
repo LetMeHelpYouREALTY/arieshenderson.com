@@ -15,7 +15,7 @@ const communities: Community[] = [
     name: 'Summerlin',
     location: 'Las Vegas, NV',
     description:
-      'Master-planned community with top-rated schools, parks, and shopping.',
+      'Master-planned community with 150+ parks, trails, and shopping.',
     priceRange: '$500K - $1.5M',
     href: '/neighborhoods/summerlin',
   },
@@ -23,7 +23,7 @@ const communities: Community[] = [
     name: 'Henderson',
     location: 'Henderson, NV',
     description:
-      'Family-friendly area with excellent schools and community amenities.',
+      'Master-planned communities with parks, trails, and moderate pricing.',
     priceRange: '$400K - $900K',
     href: '/neighborhoods/henderson',
   },

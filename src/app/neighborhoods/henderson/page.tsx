@@ -28,16 +28,11 @@ export const metadata: Metadata = genMeta({
 });
 
 export default function HendersonNeighborhoodPage() {
-  const lastUpdated = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
-
   const placeSchema = {
     "@context": "https://schema.org",
     "@type": "Place",
     name: "Henderson, Nevada",
-    description: "Family-friendly city in the Las Vegas Valley, Nevada",
+    description: "City in the Las Vegas Valley, Nevada, 16 miles southeast of the Las Vegas Strip",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Henderson",
@@ -51,7 +46,7 @@ export default function HendersonNeighborhoodPage() {
       <StructuredData data={placeSchema} />
       <Breadcrumb
         pageName="Henderson Neighborhood"
-        description="Family-friendly area with excellent schools and community amenities."
+        description="New construction communities, market stats, and amenities in Henderson."
         path="neighborhoods/henderson"
         parents={[{ name: "Neighborhoods", path: "neighborhoods" }]}
         schemaPageName="Henderson"
@@ -100,10 +95,11 @@ export default function HendersonNeighborhoodPage() {
         medianPrice={neighborhood.medianPrice}
         pricePerSqft={neighborhood.pricePerSqft}
         daysOnMarket={neighborhood.daysOnMarket}
-        activeListings={neighborhood.activeListings}
+        homesSold={neighborhood.homesSold}
         yoyChange={neighborhood.yoyChange}
         neighborhoodName={neighborhood.name}
-        lastUpdated={lastUpdated}
+        asOf={neighborhood.statsAsOf}
+        source={neighborhood.statsSource}
       />
 
       <SchoolsList schools={neighborhood.schools} neighborhoodName={neighborhood.name} />

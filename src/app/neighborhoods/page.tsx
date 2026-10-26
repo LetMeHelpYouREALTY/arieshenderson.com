@@ -22,11 +22,11 @@ const neighborhoods = [
     name: "Summerlin",
     slug: "summerlin",
     description:
-      "Master-planned luxury community with top-rated schools, championship golf courses, and premium amenities.",
+      "Master-planned luxury community with championship golf courses, 150+ parks, and premium amenities.",
     priceRange: "$500K - $1.5M+",
     highlights: [
       "150+ parks and trails",
-      "Top-rated schools",
+      "Red Rock Canyon access",
       "Championship golf courses",
       "Downtown Summerlin shopping",
     ],
@@ -35,11 +35,11 @@ const neighborhoods = [
     name: "Henderson",
     slug: "henderson",
     description:
-      "Family-friendly city with excellent schools, abundant parks, and more moderate pricing than Summerlin.",
+      "Nevada's second-largest city, with abundant parks and more moderate pricing than Summerlin.",
     priceRange: "$400K - $900K",
     highlights: [
-      "Top-rated school district",
-      "Family-oriented communities",
+      "Master-planned communities",
+      "Quick I-215 and I-11 access",
       "Extensive park systems",
       "Water-smart communities",
     ],
@@ -144,7 +144,7 @@ export default function NeighborhoodsPage() {
                 </h3>
                 <ul className="list-disc space-y-2 pl-6 text-body-color dark:text-body-color-dark">
                   <li>You want established luxury and premium amenities</li>
-                  <li>Top-rated schools are a priority</li>
+                  <li>You want Red Rock Canyon close by</li>
                   <li>You value master-planned community governance</li>
                   <li>Golf and outdoor recreation are important</li>
                   <li>Budget allows for $500K+ pricing</li>
@@ -156,8 +156,8 @@ export default function NeighborhoodsPage() {
                   Choose Henderson If:
                 </h3>
                 <ul className="list-disc space-y-2 pl-6 text-body-color dark:text-body-color-dark">
-                  <li>You want family-oriented communities</li>
-                  <li>Excellent schools at more moderate prices</li>
+                  <li>You want newer master-planned communities</li>
+                  <li>You want parks and trails at more moderate prices</li>
                   <li>You prefer a suburban feel with city access</li>
                   <li>Water-smart communities appeal to you</li>
                   <li>Budget is $400K-$900K</li>
