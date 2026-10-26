@@ -14,18 +14,21 @@ import neighborhoodsData from "@/data/neighborhoods.json";
 
 const neighborhood = neighborhoodsData["north-las-vegas"];
 
-export const metadata: Metadata = genMeta({
-  title: "New Construction Homes in North Las Vegas NV",
-  description:
-    "Find new construction in North Las Vegas with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $350K-$700K.",
-  canonical: "/neighborhoods/north-las-vegas",
-  keywords: [
-    "North Las Vegas new construction",
-    "North Las Vegas homes for sale",
-    "new construction North Las Vegas",
-    "North Las Vegas real estate",
-  ],
-});
+export const metadata: Metadata = {
+  ...genMeta({
+    title: "New Construction Homes in North Las Vegas NV",
+    description:
+      "Find new construction in North Las Vegas with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $350K-$700K.",
+    canonical: "/neighborhoods/north-las-vegas",
+    keywords: [
+      "North Las Vegas new construction",
+      "North Las Vegas homes for sale",
+      "new construction North Las Vegas",
+      "North Las Vegas real estate",
+    ],
+  }),
+  robots: { index: false, follow: true },
+};
 
 export default function NorthLasVegasNeighborhoodPage() {
   const lastUpdated = new Date().toLocaleDateString("en-US", {
