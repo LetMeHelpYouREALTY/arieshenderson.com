@@ -2,7 +2,6 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
 import NeighborhoodHero from "@/components/Neighborhood/NeighborhoodHero";
 import BuilderCommunities from "@/components/Neighborhood/BuilderCommunities";
-import MarketStats from "@/components/Neighborhood/MarketStats";
 import SchoolsList from "@/components/Neighborhood/SchoolsList";
 import NeighborhoodFAQ from "@/components/Neighborhood/NeighborhoodFAQ";
 import LeadCaptureCTA from "@/components/Neighborhood/LeadCaptureCTA";
@@ -32,10 +31,6 @@ export const metadata: Metadata = {
 
 export default function SummerlinNeighborhoodPage() {
   const currentDate = new Date().toISOString().split("T")[0];
-  const lastUpdated = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
 
   const placeSchema = {
     "@context": "https://schema.org",
@@ -55,7 +50,7 @@ export default function SummerlinNeighborhoodPage() {
       <StructuredData data={placeSchema} />
       <Breadcrumb
         pageName="Summerlin Neighborhood"
-        description="Master-planned community with top-rated schools, parks, and shopping."
+        description="Master-planned community with 150+ parks, trails, and Downtown Summerlin shopping."
         path="neighborhoods/summerlin"
         parents={[{ name: "Neighborhoods", path: "neighborhoods" }]}
         schemaPageName="Summerlin"
@@ -98,16 +93,6 @@ export default function SummerlinNeighborhoodPage() {
       <BuilderCommunities
         communities={neighborhood.communities}
         neighborhoodName={neighborhood.name}
-      />
-
-      <MarketStats
-        medianPrice={neighborhood.medianPrice}
-        pricePerSqft={neighborhood.pricePerSqft}
-        daysOnMarket={neighborhood.daysOnMarket}
-        activeListings={neighborhood.activeListings}
-        yoyChange={neighborhood.yoyChange}
-        neighborhoodName={neighborhood.name}
-        lastUpdated={lastUpdated}
       />
 
       <SchoolsList schools={neighborhood.schools} neighborhoodName={neighborhood.name} />

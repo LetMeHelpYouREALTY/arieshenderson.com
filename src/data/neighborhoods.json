@@ -12,7 +12,7 @@
     "activeListings": 120,
     "yoyChange": "+5.2%",
     "overview": "Summerlin is Las Vegas's premier master-planned community, spanning 22,500 acres on the western edge of the valley. Nestled against Red Rock Canyon National Conservation Area, Summerlin represents over 30 years of thoughtful development, creating a cohesive luxury living experience. The community consistently ranks among the nation's best places to live, known for exceptional quality of life, top-tier amenities, and stunning natural beauty. New construction buyers choose Summerlin for its established infrastructure, championship golf courses, extensive park system, and proximity to both natural recreation and urban conveniences. The area has seen steady appreciation and remains a strong investment for those seeking luxury new construction homes with long-term value.",
-    "character": "Summerlin attracts affluent professionals, retirees, and families seeking an upscale lifestyle. The community feels established yet vibrant, with mature landscaping, well-maintained infrastructure, and a strong sense of community identity. Residents enjoy an active outdoor lifestyle with 150+ parks and 150+ miles of trails, while also having access to upscale shopping at Downtown Summerlin, fine dining, and cultural amenities like the Las Vegas Ballpark.",
+    "character": "Summerlin feels established yet vibrant, with mature landscaping, well-maintained infrastructure, and a strong sense of community identity. Residents use 150+ parks and 150+ miles of trails, upscale shopping at Downtown Summerlin, fine dining, and cultural venues like the Las Vegas Ballpark.",
     "whyNewConstruction": "Summerlin's new construction market offers buyers the opportunity to own in a proven, desirable location with modern floor plans and energy-efficient features. Builders here focus on luxury finishes, larger lots, and premium locations within the master plan. The established HOA structure and community amenities are already in place, so new homeowners immediately benefit from the full Summerlin lifestyle without waiting for development.",
     "developmentTrends": "Recent development has focused on higher-density luxury communities, larger estate lots, and age-restricted active adult communities. Builders are emphasizing smart home technology, sustainable building practices, and flexible floor plans for remote work. The area continues to expand northward with new phases, maintaining the master-planned integrity while adding modern amenities.",
     "communities": [
@@ -55,18 +55,18 @@
     ],
     "schools": {
       "elementary": [
-        { "name": "Givens Elementary", "rating": 9, "type": "Public" },
-        { "name": "Vanderburg Elementary", "rating": 8, "type": "Public" },
-        { "name": "The Meadows School", "rating": 10, "type": "Private" }
+        { "name": "Givens Elementary", "type": "Public" },
+        { "name": "Vanderburg Elementary", "type": "Public" },
+        { "name": "The Meadows School", "type": "Private" }
       ],
       "middle": [
-        { "name": "Sig Rogich Middle School", "rating": 9, "type": "Public" },
-        { "name": "The Meadows School", "rating": 10, "type": "Private" }
+        { "name": "Sig Rogich Middle School", "type": "Public" },
+        { "name": "The Meadows School", "type": "Private" }
       ],
       "high": [
-        { "name": "Palo Verde High School", "rating": 8, "type": "Public" },
-        { "name": "The Meadows School", "rating": 10, "type": "Private" },
-        { "name": "Faith Lutheran High School", "rating": 9, "type": "Private" }
+        { "name": "Palo Verde High School", "type": "Public" },
+        { "name": "The Meadows School", "type": "Private" },
+        { "name": "Faith Lutheran High School", "type": "Private" }
       ]
     },
     "lifestyle": {
@@ -105,14 +105,14 @@
       },
       {
         "question": "Summerlin vs Henderson: which is better for new construction?",
-        "answer": "Summerlin offers established luxury with premium pricing and master-planned amenities. Henderson provides more moderate pricing and family-oriented communities. Summerlin is ideal if you value established infrastructure, golf, and proximity to Red Rock. Henderson suits buyers seeking better value and newer development. We can help you compare based on your priorities."
+        "answer": "Summerlin offers established luxury with premium pricing and master-planned amenities. Henderson offers more moderate pricing and newer development. Summerlin is ideal if you value established infrastructure, golf, and proximity to Red Rock. Henderson suits buyers seeking better value and newer floor plans. We can help you compare based on your priorities."
       }
     ],
     "relatedNeighborhoods": [
       {
         "name": "Henderson",
         "slug": "henderson",
-        "comparison": "More affordable with family-focused communities"
+        "comparison": "More affordable, with newer master-planned communities"
       },
       {
         "name": "North Las Vegas",
@@ -128,15 +128,17 @@
     "h1": "New Construction Homes in Henderson, NV",
     "subhead": "Find builder communities, negotiate better prices, close with confidence",
     "priceRange": "$400,000 - $900,000",
-    "medianPrice": 550000,
-    "pricePerSqft": 220,
-    "daysOnMarket": 38,
-    "activeListings": 95,
-    "yoyChange": "+4.8%",
-    "overview": "Henderson is Nevada's second-largest city and consistently ranks among America's safest cities. Located 16 miles southeast of the Las Vegas Strip, Henderson offers a perfect blend of suburban tranquility and city access. The city has experienced significant growth, particularly in new construction, with master-planned communities that emphasize family-friendly amenities, excellent schools, and sustainable living. Henderson's new construction market appeals to families, professionals, and retirees seeking quality homes at more moderate price points than Summerlin while still enjoying excellent amenities and community planning. The area's strong economy, top-rated schools, and abundance of parks make it ideal for those prioritizing family lifestyle and long-term value.",
-    "character": "Henderson has a distinctly family-oriented character with a strong sense of community. The city feels more suburban and residential compared to other Las Vegas Valley areas, with well-maintained neighborhoods, active community centers, and family-friendly events. Residents appreciate the safety, excellent schools, and the balance between quiet residential living and easy access to Las Vegas amenities. The community is diverse, welcoming, and values-oriented.",
-    "whyNewConstruction": "Henderson's new construction offers modern floor plans, energy-efficient features, and smart home technology at more accessible price points. Many communities are master-planned with parks, pools, and community centers already established. Builders focus on family-friendly designs with open floor plans, multiple bedrooms, and functional spaces. The newer infrastructure means better utilities, modern road systems, and updated building codes for safety and efficiency.",
-    "developmentTrends": "Recent development emphasizes water-smart communities, sustainable building practices, and family-oriented amenities. Builders are creating communities with extensive parks, walking trails, and community centers. There's a focus on larger lots for families, multi-generational floor plans, and communities that integrate with existing Green Valley infrastructure. The area continues expanding south and east with new phases.",
+    "medianPrice": 494764,
+    "pricePerSqft": 260,
+    "daysOnMarket": 61,
+    "homesSold": 1490,
+    "yoyChange": "+1.0%",
+    "statsAsOf": "September 2026",
+    "statsSource": "MLS sales data compiled by Redfin, three months ending September 2026",
+    "overview": "Henderson is Nevada's second-largest city, located 16 miles southeast of the Las Vegas Strip. The city has seen significant growth in new construction, with master-planned communities built around parks, trails, community centers, and water-smart landscaping. Henderson's new construction market offers quality homes at more moderate price points than Summerlin, with a September 2026 median sale price near $495,000 citywide.",
+    "character": "Henderson feels more suburban and residential than other Las Vegas Valley areas, with well-maintained neighborhoods, active community centers, and year-round city events. The city has quick freeway access via I-215 and I-11.",
+    "whyNewConstruction": "Henderson's new construction offers modern floor plans, energy-efficient features, and smart home technology at more accessible price points. Many communities are master-planned with parks, pools, and community centers already established. Builders focus on open floor plans and flexible spaces. The newer infrastructure means better utilities, modern road systems, and updated building codes for efficiency.",
+    "developmentTrends": "Recent development emphasizes water-smart communities, sustainable building practices, and shared amenities. Builders are creating communities with extensive parks, walking trails, and community centers. There's a focus on larger lots, multi-generational floor plans, and communities that integrate with existing Green Valley infrastructure. The area continues expanding south and east with new phases.",
     "communities": [
       {
         "name": "Green Valley Ranch",
@@ -186,37 +188,35 @@
     ],
     "schools": {
       "elementary": [
-        { "name": "Vanderburg Elementary", "rating": 9, "type": "Public" },
-        { "name": "Cram Middle School", "rating": 8, "type": "Public" },
-        { "name": "Green Valley High School", "rating": 9, "type": "Public" }
+        { "name": "Vanderburg Elementary", "type": "Public" }
       ],
       "middle": [
-        { "name": "Bob Miller Middle School", "rating": 8, "type": "Public" },
-        { "name": "Green Valley High School", "rating": 9, "type": "Public" }
+        { "name": "Cram Middle School", "type": "Public" },
+        { "name": "Bob Miller Middle School", "type": "Public" }
       ],
       "high": [
-        { "name": "Green Valley High School", "rating": 9, "type": "Public" },
-        { "name": "Coronado High School", "rating": 8, "type": "Public" },
-        { "name": "Foothill High School", "rating": 8, "type": "Public" }
+        { "name": "Green Valley High School", "type": "Public" },
+        { "name": "Coronado High School", "type": "Public" },
+        { "name": "Foothill High School", "type": "Public" }
       ]
     },
     "lifestyle": {
       "shopping": "The District at Green Valley Ranch offers shopping and dining, while Galleria at Sunset provides additional retail options. Multiple grocery stores and shopping centers serve the area.",
-      "dining": "Henderson features diverse dining from casual family restaurants to upscale options. The District and surrounding areas offer numerous choices for every taste and budget.",
+      "dining": "Henderson dining ranges from casual neighborhood spots to upscale options. The District at Green Valley Ranch and surrounding areas offer numerous choices for every taste and budget.",
       "parks": "Henderson boasts extensive park systems including Cornerstone Park, Acacia Park, and multiple community parks with playgrounds, sports facilities, and walking trails.",
       "healthcare": "St. Rose Dominican Hospitals serve Henderson with multiple locations. The area also has numerous medical offices, urgent care facilities, and specialty practices.",
       "commute": "20-25 minutes to Las Vegas Strip, 25-30 minutes to Downtown Las Vegas, 25 minutes to McCarran Airport. Easy access to I-215 and US-95.",
-      "unique": "Strong focus on family amenities, excellent school district, water-smart community initiatives, and integration with established Green Valley infrastructure. The area offers a true suburban feel while maintaining Las Vegas access."
+      "unique": "Water-smart community initiatives, an extensive city park and trail network, and integration with established Green Valley infrastructure. The area offers a true suburban feel while maintaining Las Vegas access."
     },
-    "buyerAgentValue": "Henderson's new construction market is competitive, and builders use various tactics to maximize profits. We regularly save clients $15,000-$50,000 through negotiations on base price, lot premiums, and upgrades. Common issues include builder add-on fees, restrictive HOA rules that aren't fully disclosed, and warranty limitations. We also help families navigate school zoning, as some new communities may have different school assignments than expected. Our knowledge of Henderson's builder landscape helps you avoid problematic communities and find the best value.",
+    "buyerAgentValue": "Henderson's new construction market is competitive, and builders use various tactics to maximize profits. We regularly save clients $15,000-$50,000 through negotiations on base price, lot premiums, and upgrades. Common issues include builder add-on fees, restrictive HOA rules that aren't fully disclosed, and warranty limitations. We also help buyers confirm school zoning, as some new communities have different school assignments than expected. Our knowledge of Henderson's builder landscape helps you avoid problematic communities and find the best value.",
     "faqs": [
       {
         "question": "What is the average price of new construction in Henderson?",
-        "answer": "The average price for new construction homes in Henderson ranges from $400,000 to $900,000, with the median around $550,000. Prices are generally more moderate than Summerlin, making Henderson attractive to families and first-time move-up buyers."
+        "answer": "New construction homes in Henderson generally range from $400,000 to $900,000. Across all Henderson sales, the median sale price was $494,764 for the three months ending September 2026, with homes selling in a median 61 days. New construction is generally more moderately priced than Summerlin."
       },
       {
         "question": "Which builders are building in Henderson?",
-        "answer": "Active builders in Henderson include Pulte Homes, Richmond American, KB Home, Toll Brothers, and DR Horton. Each offers different communities focusing on family-friendly designs and value-oriented pricing."
+        "answer": "Active builders in Henderson include Pulte Homes, Richmond American, KB Home, Toll Brothers, and DR Horton. Each offers different communities, floor plans, and price points."
       },
       {
         "question": "Are there 55+ communities in Henderson?",
@@ -236,7 +236,7 @@
       },
       {
         "question": "Henderson vs Summerlin: which is better for new construction?",
-        "answer": "Henderson offers better value with more moderate pricing, excellent schools, and family-oriented communities. Summerlin provides established luxury and premium amenities at higher price points. Henderson suits families prioritizing value and schools, while Summerlin appeals to those seeking luxury and established prestige."
+        "answer": "Henderson offers more moderate pricing and newer development. Summerlin provides established luxury and premium amenities at higher price points. Henderson suits buyers prioritizing value and newer floor plans, while Summerlin appeals to those seeking luxury and proximity to Red Rock."
       }
     ],
     "relatedNeighborhoods": [
@@ -264,10 +264,10 @@
     "daysOnMarket": 32,
     "activeListings": 85,
     "yoyChange": "+6.1%",
-    "overview": "North Las Vegas represents one of the Las Vegas Valley's fastest-growing areas, offering exceptional value for new construction homebuyers. The city has transformed from a primarily industrial area to a vibrant residential community with modern infrastructure, new schools, and expanding commercial development. North Las Vegas appeals to first-time buyers, growing families, and investors seeking affordable new construction with strong appreciation potential. The area offers more square footage for your money, lower property taxes, and competitive pricing on new homes. Recent development has focused on master-planned communities with contemporary designs, energy-efficient features, and family-friendly amenities. The city's strategic location provides excellent access to major employment centers including Nellis Air Force Base, Las Vegas Motor Speedway, and the growing industrial corridor.",
-    "character": "North Las Vegas has an energetic, growth-oriented character. The community feels newer and more diverse, with a mix of young families, military personnel, and professionals seeking affordable homeownership. The area maintains a strong sense of community with active neighborhood associations and local events. Residents appreciate the value, modern amenities, and the opportunity to be part of a growing area with increasing property values.",
+    "overview": "North Las Vegas represents one of the Las Vegas Valley's fastest-growing areas, offering exceptional value for new construction homebuyers. The city has transformed from a primarily industrial area to a vibrant residential community with modern infrastructure, new schools, and expanding commercial development. North Las Vegas appeals to first-time buyers, move-up buyers, and investors seeking affordable new construction. The area offers more square footage for your money, lower property taxes, and competitive pricing on new homes. Recent development has focused on master-planned communities with contemporary designs, energy-efficient features, and parks and shared amenities. The city's strategic location provides excellent access to major employment centers including Nellis Air Force Base, Las Vegas Motor Speedway, and the growing industrial corridor.",
+    "character": "North Las Vegas has an energetic, growth-oriented character. The area has active neighborhood associations and local events, modern amenities, and quick access to Nellis Air Force Base, the I-15 and I-215 corridors, and the growing industrial employment hub.",
     "whyNewConstruction": "North Las Vegas new construction offers the best value in the Las Vegas Valley. Buyers get modern floor plans, energy-efficient features, and smart home technology at significantly lower prices than other areas. New communities feature contemporary designs, larger lots for the price, and amenities like parks, pools, and community centers. The newer infrastructure means modern utilities, updated building codes, and better planned communities with less traffic congestion than older areas.",
-    "developmentTrends": "Development is accelerating with multiple master-planned communities underway. Builders focus on value-oriented designs, larger homes for the price, and family-friendly amenities. There's emphasis on energy efficiency, smart home features, and communities that integrate parks, trails, and recreational facilities. The area continues expanding north and east with new phases and infrastructure improvements.",
+    "developmentTrends": "Development is accelerating with multiple master-planned communities underway. Builders focus on value-oriented designs, larger homes for the price, and shared amenities. There's emphasis on energy efficiency, smart home features, and communities that integrate parks, trails, and recreational facilities. The area continues expanding north and east with new phases and infrastructure improvements.",
     "communities": [
       {
         "name": "Aliante",
@@ -317,23 +317,23 @@
     ],
     "schools": {
       "elementary": [
-        { "name": "Cox Elementary", "rating": 7, "type": "Public" },
-        { "name": "Hayden Elementary", "rating": 8, "type": "Public" },
-        { "name": "Garehime Elementary", "rating": 7, "type": "Public" }
+        { "name": "Cox Elementary", "type": "Public" },
+        { "name": "Hayden Elementary", "type": "Public" },
+        { "name": "Garehime Elementary", "type": "Public" }
       ],
       "middle": [
-        { "name": "Cannon Middle School", "rating": 7, "type": "Public" },
-        { "name": "Mack Middle School", "rating": 7, "type": "Public" }
+        { "name": "Cannon Middle School", "type": "Public" },
+        { "name": "Mack Middle School", "type": "Public" }
       ],
       "high": [
-        { "name": "Canyon Springs High School", "rating": 7, "type": "Public" },
-        { "name": "Cheyenne High School", "rating": 7, "type": "Public" },
-        { "name": "Palo Verde High School", "rating": 8, "type": "Public" }
+        { "name": "Canyon Springs High School", "type": "Public" },
+        { "name": "Cheyenne High School", "type": "Public" },
+        { "name": "Palo Verde High School", "type": "Public" }
       ]
     },
     "lifestyle": {
       "shopping": "Aliante Station provides shopping and dining options. The area has multiple grocery stores and shopping centers serving the growing population, with more retail development planned.",
-      "dining": "North Las Vegas offers diverse dining options from casual family restaurants to chain establishments. The area continues to attract new restaurants as the population grows.",
+      "dining": "North Las Vegas dining ranges from casual neighborhood spots to chain establishments. The area continues to attract new restaurants as the population grows.",
       "parks": "The area features multiple community parks including Aliante Nature Discovery Park, Craig Ranch Regional Park, and numerous neighborhood parks with playgrounds and sports facilities.",
       "healthcare": "North Vista Hospital serves the area, along with multiple urgent care facilities and medical offices. Healthcare access continues to expand with the growing population.",
       "commute": "25-30 minutes to Las Vegas Strip, 30-35 minutes to Downtown Las Vegas, 20 minutes to Nellis Air Force Base, 35 minutes to McCarran Airport. Easy access to I-15 and US-95.",
@@ -367,7 +367,7 @@
       },
       {
         "question": "North Las Vegas vs Henderson: which is better for new construction?",
-        "answer": "North Las Vegas offers the best value with lower prices and newer infrastructure. Henderson provides more established communities and higher-rated schools at moderate prices. North Las Vegas suits first-time buyers and those prioritizing affordability, while Henderson appeals to families seeking established neighborhoods."
+        "answer": "North Las Vegas offers lower prices and newer infrastructure. Henderson provides more established communities at moderate prices. North Las Vegas suits first-time buyers and those prioritizing affordability, while Henderson appeals to buyers seeking established neighborhoods."
       }
     ],
     "relatedNeighborhoods": [
