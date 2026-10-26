@@ -14,18 +14,21 @@ import neighborhoodsData from "@/data/neighborhoods.json";
 
 const neighborhood = neighborhoodsData.summerlin;
 
-export const metadata: Metadata = genMeta({
-  title: "New Construction Homes in Summerlin NV",
-  description:
-    "Find new construction in Summerlin with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $500K-$1.5M.",
-  canonical: "/neighborhoods/summerlin",
-  keywords: [
-    "Summerlin new construction",
-    "Summerlin homes for sale",
-    "new construction Summerlin",
-    "Summerlin real estate",
-  ],
-});
+export const metadata: Metadata = {
+  ...genMeta({
+    title: "New Construction Homes in Summerlin NV",
+    description:
+      "Find new construction in Summerlin with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $500K-$1.5M.",
+    canonical: "/neighborhoods/summerlin",
+    keywords: [
+      "Summerlin new construction",
+      "Summerlin homes for sale",
+      "new construction Summerlin",
+      "Summerlin real estate",
+    ],
+  }),
+  robots: { index: false, follow: true },
+};
 
 export default function SummerlinNeighborhoodPage() {
   const currentDate = new Date().toISOString().split("T")[0];

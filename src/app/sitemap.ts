@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Neighborhood pages
-  const neighborhoods = ['summerlin', 'henderson', 'north-las-vegas']
+  const neighborhoods = ['henderson']
   const neighborhoodPages = neighborhoods.map((n) => ({
     url: `${baseUrl}/neighborhoods/${n}`,
     lastModified: new Date(),
