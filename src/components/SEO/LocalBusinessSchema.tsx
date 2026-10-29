@@ -7,7 +7,7 @@ export default function LocalBusinessSchema() {
     description:
       "Exclusive buyer representation for new construction homes in Las Vegas. We negotiate price, review contracts, and protect your interests. Free to buyers.",
     url: "https://www.arieshenderson.com",
-    telephone: "+1-702-718-0043",
+    telephone: "+1-702-500-1955",
     email: "contact@arieshenderson.com",
     address: {
       "@type": "PostalAddress",
