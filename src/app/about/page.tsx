@@ -32,7 +32,7 @@ const aboutPageSchema = {
     name: "Dr. Jan Duffy",
     identifier: "S.0197614",
     jobTitle: "Exclusive Buyer Agent",
-    telephone: "+1-702-718-0043",
+    telephone: "+1-702-500-1955",
     email: "contact@arieshenderson.com",
     url: "https://www.arieshenderson.com/about",
     address: {

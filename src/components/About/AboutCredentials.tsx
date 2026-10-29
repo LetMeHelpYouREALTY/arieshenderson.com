@@ -73,10 +73,10 @@ const AboutCredentials = () => {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="tel:+17027180043"
+                href="tel:+17025001955"
                 className="inline-block rounded-xs bg-primary px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/90"
               >
-                Call (702) 718-0043
+                Call (702) 500-1955
               </a>
               <a
                 href="https://maps.google.com/?q=9406+Del+Webb+Boulevard+Las+Vegas+NV+89134"

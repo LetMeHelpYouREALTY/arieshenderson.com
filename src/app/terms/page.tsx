@@ -102,10 +102,10 @@ export default function TermsPage() {
                 <br />
                 Phone:{" "}
                 <a
-                  href="tel:+17027180043"
+                  href="tel:+17025001955"
                   className="text-primary hover:underline"
                 >
-                  (702) 718-0043
+                  (702) 500-1955
                 </a>
                 <br />
                 Email:{" "}

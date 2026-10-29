@@ -187,10 +187,10 @@ const Footer = () => {
                       Las Vegas, NV 89134
                     </p>
                     <a
-                      href="tel:7027180043"
+                      href="tel:7025001955"
                       className="mb-2 block text-sm text-primary hover:underline"
                     >
-                      (702) 718-0043
+                      (702) 500-1955
                     </a>
                     <a
                       href="https://maps.google.com/?q=9406+Del+Webb+Boulevard+Las+Vegas+NV+89134"
@@ -262,10 +262,10 @@ const Footer = () => {
                       Las Vegas, NV 89144
                     </p>
                     <a
-                      href="tel:7029031952"
+                      href="tel:7025001955"
                       className="mb-2 block text-sm text-primary hover:underline"
                     >
-                      (702) 903-1952
+                      (702) 500-1955
                     </a>
                     <a
                       href="https://maps.google.com/?q=1490+Center+Crossing+Rd+Las+Vegas+NV+89144"
