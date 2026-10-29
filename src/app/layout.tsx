@@ -68,12 +68,10 @@ export default function RootLayout({
           </div>
           <ScrollToTop />
         </Providers>
-        <WidgetTracker />
       </body>
     </html>
   );
 }
 
 import { Providers } from "./providers";
-import WidgetTracker from './widget-tracker'
 
