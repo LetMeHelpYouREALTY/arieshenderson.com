@@ -1,15 +1,7 @@
 const credentials = [
   {
-    label: "Nevada Real Estate License",
-    value: "S.0197614",
-  },
-  {
-    label: "Brokerage",
-    value: "Berkshire Hathaway HomeServices Nevada Properties",
-  },
-  {
     label: "Experience",
-    value: "30+ years serving Las Vegas homebuyers",
+    value: "Licensed since 2008 · 35 years in Las Vegas",
   },
   {
     label: "Career Sales",
@@ -35,9 +27,8 @@ const AboutCredentials = () => {
               Meet Dr. Jan Duffy
             </h2>
             <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg">
-              Dr. Jan Duffy is a Nevada-licensed real estate professional
-              (S.0197614) with Berkshire Hathaway HomeServices Nevada
-              Properties. With more than 30 years of experience and over $127M
+              Dr. Jan Duffy is a Nevada real estate professional, licensed
+              since 2008 · 35 years in Las Vegas. With over $127M
               in career sales across the Las Vegas Valley, she leads the New
               Construction Homes Division as an exclusive buyer agent—
               representing homebuyers only, never builders or sellers.
@@ -60,8 +51,6 @@ const AboutCredentials = () => {
                 Visit Our Office
               </h3>
               <p className="text-base font-medium text-body-color">
-                Berkshire Hathaway HomeServices Nevada Properties
-                <br />
                 New Construction Homes Division — Dr. Jan Duffy
                 <br />
                 9406 Del Webb Boulevard, Las Vegas, NV 89134

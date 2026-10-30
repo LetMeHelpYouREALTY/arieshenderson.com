@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Exclusive Buyer Representation You Can Trust"
-                paragraph="Dr. Jan Duffy brings decades of real estate expertise to serve Las Vegas homebuyers. As an exclusive buyer agent, we work solely for you—not the builder—ensuring you get the best deal, contract protection, and representation throughout your new construction purchase."
+                paragraph="Dr. Jan Duffy, licensed since 2008 · 35 years in Las Vegas, serves Las Vegas homebuyers. As an exclusive buyer agent, we work solely for you—not the builder—ensuring you get the best deal, contract protection, and representation throughout your new construction purchase."
                 mb="44px"
               />
 

@@ -5,7 +5,7 @@ export async function GET() {
   const content = `# Aries Henderson — Dr. Jan Duffy
 > Discover homes in Aries Henderson community in Henderson, Nevada
 ## About
-Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with Berkshire Hathaway HomeServices Nevada Properties. With 30+ years of experience serving the Las Vegas area and over $127M in career sales, Dr. Duffy specializes in this community and helps buyers find their next Nevada home.
+Dr. Jan Duffy is a Nevada-licensed real estate professional (S.0197614.LLC) with Berkshire Hathaway HomeServices Nevada Properties. Licensed since 2008 · 35 years in Las Vegas, with over $127M in career sales, Dr. Duffy specializes in this community and helps buyers find their next Nevada home.
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 - **License:** Nevada S.0197614.LLC
 - **Phone:** 702-500-1955
