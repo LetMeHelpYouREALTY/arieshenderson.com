@@ -10,7 +10,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = genMeta({
   title: "About Dr. Jan Duffy | Exclusive Buyer Agent Las Vegas",
   description:
-    "Meet Dr. Jan Duffy (NV S.0197614), ABR & CSP certified exclusive buyer agent, Berkshire Hathaway HomeServices Nevada Properties. 30+ years, $127M+ sold.",
+    "Meet Dr. Jan Duffy, ABR & CSP certified exclusive buyer agent in Las Vegas. Licensed since 2008 · 35 years in Las Vegas, $127M+ sold.",
   canonical: "/about",
   keywords: [
     "exclusive buyer agent",

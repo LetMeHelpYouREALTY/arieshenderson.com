@@ -26,9 +26,6 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <p className="mb-4 text-lg font-semibold text-black dark:text-white">
-                  Berkshire Hathaway HomeServices Nevada Properties
-                </p>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   Your Trusted Las Vegas Real Estate Experts
                 </p>
@@ -284,7 +281,7 @@ const Footer = () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              © 2025 Berkshire Hathaway HomeServices Nevada Properties - New Construction Homes Division. Comprehensive Real Estate Services by Dr. Jan Duffy S.0197614. All rights reserved.
+              © 2025 New Construction Homes Division. Comprehensive Real Estate Services by Dr. Jan Duffy. All rights reserved. Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC
             </p>
           </div>
         </div>

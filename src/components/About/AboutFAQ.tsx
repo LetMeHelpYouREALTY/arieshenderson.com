@@ -4,7 +4,7 @@ export const aboutFaqs = [
   {
     question: "Who is Dr. Jan Duffy?",
     answer:
-      "Dr. Jan Duffy is a Nevada-licensed real estate agent (License S.0197614) with Berkshire Hathaway HomeServices Nevada Properties. She has 30+ years of experience and over $127M in career sales, specializing in exclusive buyer representation for new construction homes across Las Vegas, Henderson, Summerlin, and North Las Vegas.",
+      "Dr. Jan Duffy is a Nevada real estate agent, licensed since 2008 · 35 years in Las Vegas, with over $127M in career sales, specializing in exclusive buyer representation for new construction homes across Las Vegas, Henderson, Summerlin, and North Las Vegas.",
   },
   {
     question: "What is an exclusive buyer agent?",
