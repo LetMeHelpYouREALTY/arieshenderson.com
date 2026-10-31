@@ -68,10 +68,14 @@ export default function RootLayout({
           </div>
           <ScrollToTop />
         </Providers>
+        <VercelAnalytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
 }
 
 import { Providers } from "./providers";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
